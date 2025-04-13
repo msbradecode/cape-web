@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profile & Payment</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Loading Screen -->
+  <div class="loading">
+    <div class="loading-bar">
+      <div id="progress"></div>
+      <p id="loading-text">0%</p>
+    </div>
+  </div>
+
+  <!-- Main Container -->
+  <div class="container" style="display:none;">
+    <!-- Particle Background -->
+    <div id="particles-js"></div>
+
+    <!-- Profile Section -->
+    <div class="profile-section">
+      <div class="profile-container">
+        <!-- Profile Picture -->
+        <img src="https://files.catbox.moe/uvtynf.jpg" alt="Profile Picture" class="profile-pic">
+        <h2>IBRA DECODE</h2>
+        <p class="bio">Passionate about coding and continuously learning. As a "Newbie Developer", I’m excited to build, create, and grow in the tech world.</p>
+      </div>
+    </div>
+
+    <!-- Payment Section -->
+    <div class="payment-section">
+      <button onclick="showPopup('qris')">QRIS</button>
+      <button onclick="showPopup('dana')">DANA</button>
+      <button onclick="showPopup('gopay')">GOPAY</button>
+      <button onclick="showPopup('ovo')">OVO</button>
+    </div>
+  </div>
+
+  <!-- Popup for Payment Method -->
+  <div id="popup">
+    <div id="popup-content">
+      <!-- Content will be inserted dynamically -->
+    </div>
+    <button onclick="closePopup()">Close</button>
+  </div>
+
+  <audio id="success-sound" src="sounds/success.mp3"></audio>
+  <audio id="click-sound" src="sounds/click.mp3"></audio>
+  <audio id="error-sound" src="sounds/error.mp3"></audio>
+  <script src="particles.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
